@@ -1,0 +1,37 @@
+{
+    "max_open_trades": 2,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "dry_run_wallet": 112,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "spot",
+    "margin_mode": "",
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "pair_whitelist": ["HYPE/USDT"],
+        "skip_pair_validation": true,
+        "ccxt_async_config": {"enableRateLimit": true}
+    },
+    "pairlists": [{"method": "StaticPairList"}],
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {"enabled": false}
+    },
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": false,
+        "order_book_top": 1
+    },
+    "bot_name": "trader_v5",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {"process_throttle_secs": 5}
+}

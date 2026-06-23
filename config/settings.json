@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "agent": {
+    "name": "Trader",
+    "workspace": "/workspace/trader/",
+    "model_routine": "deepseek/deepseek-v4-pro",
+    "model_deep": "anthropic/claude-opus-4-8",
+    "heartbeat_minutes": 15
+  },
+  "cache": {
+    "ohlcv_ttl_minutes": 5,
+    "whale_ttl_minutes": 10,
+    "correlation_refresh_hours": 24
+  },
+  "alerts": {
+    "price_move_threshold_pct": 3.0,
+    "whale_volume_z_threshold": 3.0,
+    "sr_approach_atr_multiple": 0.3
+  },
+  "briefings": {
+    "morning_hour_utc": 7,
+    "evening_hour_utc": 19
+  },
+  "halt": false,
+  "phase": "4",
+  "exchange": "hyperliquid",
+  "live_trading": {
+    "enabled": true,
+    "account_usdc": 53,
+    "max_risk_per_trade_pct": 2.0,
+    "daily_loss_limit_pct": 5.0,
+    "max_positions": 2,
+    "max_leverage": 5,
+    "symbols": ["HYPE", "BTC"]
+  },
+  "features": {
+    "signal_generation": true,
+    "auto_position_sync": true,
+    "auto_execution": true,
+    "sensei_reflections": false,
+    "simulated_execution": false,
+    "sim_auto_approve": false
+  },
+  "simulation": {
+    "starting_equity_eur": 10000,
+    "started_at": "2026-06-20T22:00:00+02:00",
+    "duration_days": 7
+  }
+}

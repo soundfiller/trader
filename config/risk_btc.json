@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "name": "Trader V5 BTC Risk Configuration — LIVE",
+  "description": "BTC-specific risk parameters from v5 dual-mode backtest (2026-06-23). Best config: DSR 0.654, +31.8% vs BH -8.9%, 61 trades, 44.3% WR.",
+  "note": "BTC requires wider stops (2.5x ATR) and higher RR targets (3.0) due to higher nominal price and different volatility structure vs HYPE.",
+  "asset": "BTC",
+  "pair": "BTC/USDC:USDC",
+  "exchange": "hyperliquid",
+  "timeframe": "4h",
+  "engine_version": "v5_dual_mode",
+  "limits": {
+    "max_risk_per_trade_pct": 2.0,
+    "max_position_pct": 40.0,
+    "max_gross_exposure_pct": 80.0,
+    "daily_loss_limit_pct": 5.0,
+    "min_conviction": 3,
+    "min_risk_reward": 1.0,
+    "max_leverage": 5,
+    "default_leverage": 3,
+    "allow_5x_conviction": 5,
+    "allow_5x_rr_min": 2.5
+  },
+  "signal": {
+    "rr_target": 3.0,
+    "atr_sl_mult": 2.5,
+    "max_hold_bars": 60,
+    "cooldown_bars": 1
+  },
+  "regime": {
+    "adx_threshold_low": 20,
+    "adx_threshold_high": 30,
+    "adx_period": 14,
+    "trend_ema_period": 50,
+    "mr_rr_target": 3.0,
+    "mr_atr_sl_mult": 2.5,
+    "mr_max_hold_bars": 60,
+    "tf_use_trailing_stop": true,
+    "tf_trail_atr_mult": 2.5,
+    "tf_trail_activation_r": 1.5,
+    "tf_entry_atr_breakout": 0.3,
+    "tf_max_hold_bars": 72,
+    "tf_pyramid_on_r": 1.0
+  },
+  "fusion": {
+    "chart": 0.75,
+    "whale": 0.15,
+    "regime": 0.10
+  },
+  "costs": {
+    "execution_mode": "maker",
+    "maker_fee_pct": 0.0150,
+    "taker_fee_pct": 0.0450
+  },
+  "backtest_performance": {
+    "dsr": 0.654,
+    "profit_factor": 1.422,
+    "total_return_pct": 31.8,
+    "buyhold_return_pct": -8.9,
+    "max_drawdown_pct": -14.7,
+    "win_rate_pct": 44.3,
+    "trades": 61,
+    "conviction_3_wr": 42.5,
+    "conviction_4_wr": 47.6,
+    "exits": {"SL": 32, "EXPIRY": 18, "TP": 11},
+    "test_period": "2024-05-24 to 2026-06-23",
+    "test_bars": 4560
+  }
+}

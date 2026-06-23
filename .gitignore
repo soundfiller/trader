@@ -1,0 +1,29 @@
+# Sensitive — never commit
+.openclaw/
+creds/
+journal/
+memory/
+data/
+positions.json
+openclaw-workspace-state.json
+
+# Large binaries / venvs
+freqtrade_venv/
+backtest/.venv/
+*.pkl
+*.pickle
+/tmp/
+
+# Freqtrade data (raw OHLCV)
+freqtrade/user_data/data/
+
+# Generated
+dashboard.html
+
+# IDE / OS
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+avatar.png
+*.bak-*

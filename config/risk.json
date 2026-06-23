@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.1",
+  "name": "Trader Risk Configuration — LIVE",
+  "description": "Live risk limits for Hyperliquid unified account (spot + perps share USDC pool).",
+  "note": "Total mixed equity ≈ $270, but TRADING CAPITAL is perps_account_value_usdc (≈$42-45). All risk limits use TRADING CAPITAL, not mixed equity.",
+  "limits": {
+    "max_risk_per_trade_pct": 2.0,
+    "max_position_pct": 40.0,
+    "max_gross_exposure_pct": 80.0,
+    "daily_loss_limit_pct": 5.0,
+    "max_correlated_positions": 2,
+    "min_conviction": 3,
+    "min_risk_reward": 1.5,
+    "max_leverage": 5,
+    "default_leverage": 3,
+    "allow_5x_conviction": 5,
+    "allow_5x_rr_min": 2.5
+  },
+  "account": {
+    "type": "unified",
+    "trading_capital_source": "perps_account_value_usdc",
+    "equity_usdc": 53,
+    "mixed_equity_usdc": 270,
+    "base_currency": "EUR",
+    "quote_currency": "USDC"
+  },
+  "signal": {
+    "expiry_minutes": 60,
+    "publish_threshold_conviction": 3,
+    "anti_overtrade_cooldown_minutes": 15
+  },
+  "timeframes": {
+    "primary": "4h",
+    "context": "1d",
+    "alert": "1h"
+  },
+  "watchlist_v1": [
+    "HYPE"
+  ]
+}

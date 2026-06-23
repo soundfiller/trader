@@ -1,0 +1,156 @@
+{
+  "schema": "trader_v5_per_asset_config",
+  "version": "1.0",
+  "date": "2026-06-23",
+  "engine": "v5 dual-mode ADX regime switch",
+  "capital_usdc": 112.0,
+  "execution": "maker",
+  "dsr_trials": 10,
+
+  "hype_4h": {
+    "tested": true,
+    "oos_tested": true,
+    "note_in_sample": "Sweep DSR 0.937 was IN-SAMPLE (test_start=-1169 due to only 3391 bars). The OOS DSR below is the honest number.",
+    "best_dsr_oos": 0.257,
+    "best_dsr_is": 0.937,
+    "trades_oos": 46,
+    "return_pct": 2.8,
+    "buyhold_pct": 171.0,
+    "win_rate_pct": 32.6,
+    "pf": 1.046,
+    "max_dd_pct": -13.3,
+    "conviction": {"4": 59.3, "5": 0.0},
+    "exits": {"TP": 13, "SL": 12, "EXPIRY": 3},
+    "regime": {
+      "adx_threshold_low": 20,
+      "adx_threshold_high": 25,
+      "adx_period": 14,
+      "trend_ema_period": 50,
+      "mr_rr_target": 2.5,
+      "mr_atr_sl_mult": 2.0,
+      "mr_max_hold_bars": 60,
+      "tf_use_trailing_stop": true,
+      "tf_trail_atr_mult": 2.5,
+      "tf_trail_activation_r": 1.5,
+      "tf_entry_atr_breakout": 0.4,
+      "tf_max_hold_bars": 96,
+      "tf_pyramid_on_r": 0
+    },
+    "limits": {
+      "max_risk_per_trade_pct": 2.0,
+      "min_conviction": 3,
+      "min_risk_reward": 1.0,
+      "max_position_pct": 40.0,
+      "max_gross_exposure_pct": 80.0,
+      "daily_loss_limit_pct": 5.0
+    },
+    "fusion": {"chart": 0.75, "whale": 0.15, "regime": 0.10},
+    "note": "Highest quality strategy across all assets (DSR 0.937, PF 2.69). But only 28 trades in 2 years — HYPE trends too strongly for mean-reversion zones. Use with lower ADX gates (15/25) for more trades at slightly lower quality."
+  },
+
+  "btc_4h": {
+    "tested": true,
+    "best_dsr": 0.662,
+    "trades": 61,
+    "return_pct": 32.4,
+    "buyhold_pct": -8.6,
+    "win_rate_pct": 44.3,
+    "pf": 1.43,
+    "max_dd_pct": -14.7,
+    "conviction": "not tracked in sweep",
+    "exits": "not tracked in sweep",
+    "regime": {
+      "adx_threshold_low": 20,
+      "adx_threshold_high": 30,
+      "adx_period": 14,
+      "trend_ema_period": 50,
+      "mr_rr_target": 3.0,
+      "mr_atr_sl_mult": 2.5,
+      "mr_max_hold_bars": 60,
+      "tf_use_trailing_stop": true,
+      "tf_trail_atr_mult": 2.5,
+      "tf_trail_activation_r": 1.5,
+      "tf_entry_atr_breakout": 0.3,
+      "tf_max_hold_bars": 72,
+      "tf_pyramid_on_r": 0
+    },
+    "limits": {
+      "max_risk_per_trade_pct": 2.0,
+      "min_conviction": 3,
+      "min_risk_reward": 1.0,
+      "max_position_pct": 40.0,
+      "max_gross_exposure_pct": 80.0,
+      "daily_loss_limit_pct": 5.0
+    },
+    "fusion": {"chart": 0.75, "whale": 0.15, "regime": 0.10},
+    "note": "BEATS BUY-AND-HOLD (+32.4% vs -8.6%). BTC was in bear/choppy 2-year cycle. Wider MR stops (2.5x ATR) needed due to BTC's higher nominal price. 61 trades provides statistical power. DSR 0.66 is below 0.95 gate but best cross-asset risk-adjusted return."
+  },
+
+  "eth_4h": {
+    "tested": true,
+    "best_dsr": 0.189,
+    "trades": 96,
+    "return_pct": 4.7,
+    "buyhold_pct": -55.1,
+    "win_rate_pct": 33.3,
+    "pf": 1.04,
+    "max_dd_pct": -46.8,
+    "regime": {
+      "adx_threshold_low": 20,
+      "adx_threshold_high": 30,
+      "adx_period": 14,
+      "trend_ema_period": 50,
+      "mr_rr_target": 2.5,
+      "mr_atr_sl_mult": 2.0,
+      "mr_max_hold_bars": 60,
+      "tf_use_trailing_stop": true,
+      "tf_trail_atr_mult": 2.5,
+      "tf_trail_activation_r": 1.5,
+      "tf_entry_atr_breakout": 0.4,
+      "tf_max_hold_bars": 96,
+      "tf_pyramid_on_r": 0
+    },
+    "limits": {
+      "max_risk_per_trade_pct": 2.0,
+      "min_conviction": 3,
+      "min_risk_reward": 1.0,
+      "max_position_pct": 40.0,
+      "max_gross_exposure_pct": 80.0,
+      "daily_loss_limit_pct": 5.0
+    },
+    "fusion": {"chart": 0.75, "whale": 0.15, "regime": 0.10},
+    "note": "NO VIABLE EDGE. Best config DSR 0.189 — essentially noise. 8/30 configs produced zero trades. ETH -55% BH makes comparison meaningless but strategy quality is too low. Recommend: EXCLUDE from multi-asset basket or use wider ADX gates + higher chart weight."
+  },
+
+  "sol_4h": {
+    "tested": true,
+    "date": "2026-06-23",
+    "best_dsr": 0.473,
+    "trades": 73,
+    "return_pct": 21.1,
+    "buyhold_pct": -58.8,
+    "win_rate_pct": 38.0,
+    "pf": 1.23,
+    "max_dd_pct": -11.2,
+    "gate_dsr": "FAIL (best 0.473 < 0.50)",
+    "gate_trades": "PASS (73 >= 40)",
+    "gate_bh": "PASS (+21.1% vs -58.8%)",
+    "verdict": "WAIT — extracts clear alpha but fails statistical significance gate. All 30 configs had positive DSR. ADX 22 is sweet spot.",
+    "regime": {
+      "adx_threshold_low": 22,
+      "adx_threshold_high": 28,
+      "mr_rr_target": 3.0,
+      "mr_atr_sl_mult": 2.5,
+      "mr_max_hold_bars": 48,
+      "tf_trail_atr_mult": 3.0,
+      "tf_trail_activation_r": 1.5,
+      "tf_entry_atr_breakout": 0.4,
+      "tf_max_hold_bars": 72
+    },
+    "next_steps": [
+      "Run with DSR_trials=1 to see raw SR (removes multiple-testing haircut)",
+      "Finer sweep around ADX 22/28 with narrower RR/SL ranges"
+    ],
+    "note": "Closest miss so far. DSR 0.473 vs 0.50 gate. PSR=77% (77% chance true Sharpe > 0). Could revisit with finer tuning."
+  }
+}

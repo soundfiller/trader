@@ -1,0 +1,29 @@
+======================================================================
+TRADER BACKTEST  |  REAL Hyperliquid HYPE 4h
+bars=3391  days=760  tf=4h  exec=maker  builder=0.0%
+======================================================================
+  data_source             : REAL Hyperliquid HYPE 4h
+  capital_start           : 112.0
+  capital_end             : 117.3566
+  total_return_pct        : 4.7827
+  buyhold_return_pct      : 114.8068
+  n_signals               : 2341
+  n_trades                : 219
+  win_rate_pct            : 38.8128
+  profit_factor           : 1.0229
+  avg_R                   : 0.0119
+  expectancy_R            : 0.0119
+  gross_pnl               : 9.2701
+  total_fees              : 2.9719
+  net_pnl                 : 5.821
+  max_drawdown_pct        : -25.5907
+  sharpe_ann              : 0.2503
+  sortino_ann             : 0.2852
+  calmar                  : 0.1197
+  psr_gt0                 : 0.5602
+  deflated_sharpe         : 0.2622
+  dsr_note                : ok
+  winrate_by_conviction   : {3: np.float64(37.2), 4: np.float64(48.4)}
+  trades_by_conviction    : {3: 188, 4: 31}
+  exit_reasons            : {'SL': 121, 'TP': 60, 'EXPIRY': 38}
+======================================================================

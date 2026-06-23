@@ -1,0 +1,19 @@
+[
+  {
+    "trade_id": "SIG-20260621-160909-SOL",
+    "symbol": "SOLUSDT",
+    "display": "SOL",
+    "direction": "LONG",
+    "entry": 73.91,
+    "sl": 72.5,
+    "tp": 76.9,
+    "size": 33,
+    "notional_eur": 2439.03,
+    "risk_eur": 46.53,
+    "rr": 2.12,
+    "conviction": 4,
+    "entry_time": "2026-06-21T16:09:09.982739+02:00",
+    "status": "open",
+    "thesis": "SOL HH+HL structure on 4h, EMA bullish alignment, MACD bullish. Targeting EMA50 daily resistance."
+  }
+]

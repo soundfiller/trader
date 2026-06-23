@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "simulation": {
+    "started_at": "2026-06-20T22:00:00+02:00",
+    "starting_equity_eur": 10000,
+    "duration_days": 7
+  },
+  "current": {
+    "updated_at": "2026-06-21T20:05:00+02:00",
+    "equity_eur": 10000.99,
+    "cash_eur": 7560.97,
+    "unrealized_pnl_eur": 0.99,
+    "realized_pnl_eur": 0,
+    "positions": [
+      {
+        "id": "SIG-20260621-160909-SOL",
+        "symbol": "SOLUSDT",
+        "display": "SOL",
+        "direction": "LONG",
+        "entry": 73.91,
+        "current_price": 73.94,
+        "sl": 72.5,
+        "tp": 76.9,
+        "size": 33,
+        "notional_eur": 2440.02,
+        "entry_time": "2026-06-21T16:09:09.982739+02:00",
+        "conviction": 4,
+        "rr": 2.12,
+        "correlation_group": "majors",
+        "status": "open",
+        "thesis": "SOL HH+HL structure on 4h, EMA bullish alignment (price > EMA20 > EMA50), MACD bullish. Key test: EMA200 at $75.18. Invalidation below $72.50 breaks HL structure."
+      }
+    ]
+  }
+}

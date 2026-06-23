@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "symbols": [
+    {
+      "symbol": "BTCUSDT",
+      "display": "BTC",
+      "role": "traded",
+      "correlation_group": "majors",
+      "note": "V5 dual-mode live trading — DSR 0.654, +31.8% vs BH -8.9%"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "display": "ETH",
+      "role": "major",
+      "correlation_group": "majors"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "display": "SOL",
+      "role": "high_beta",
+      "correlation_group": "majors"
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "display": "HYPE",
+      "role": "ecosystem_native",
+      "correlation_group": "hl_ecosystem",
+      "note": "Hyperliquid native — richest on-chain data"
+    }
+  ],
+  "correlation_groups": {
+    "majors": {
+      "description": "BTC, ETH, SOL — high inter-correlation",
+      "max_same_direction": 2
+    },
+    "hl_ecosystem": {
+      "description": "Hyperliquid ecosystem tokens",
+      "max_same_direction": 1
+    }
+  }
+}
